@@ -5,7 +5,7 @@
 - Statistical ([regression](https://en.wikipedia.org/wiki/Regression_analysis)) models can account for other sources of variation in the KPI of interest besides Balto use.
 - Models can account for time explicitly.
 - Balto use may be correlated with group membership or other factors. Controlling for some of these factors leads to a higher level of confidence that the Balto effect is really due to Balto and not some other source of variation.
-- Regression modesl avoid unnecessary aggregations. As a general rule, statistical analyses should rely on as much relevant information as possible. Computing group-level or time-level statistics removes information about variation in performance across agents or time periods.
+- Regression models avoid unnecessary aggregations. As a general rule, statistical analyses should rely on as much relevant information as possible. Computing group-level or time-level statistics removes information about variation in performance across agents or time periods.
 - Regression models can measure the magnitude of the Balto effect, formally test whether it is statistically different from zero, and compute condfidence intervals to address uncertainty.
 
 ## How much data do I need?
