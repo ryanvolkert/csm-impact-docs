@@ -2,7 +2,7 @@
 This documentation is intended to guide Customer Success Managers (CSMs) at Balto through the process of automated impact or ROI analyses provided by Balto Data Science (DS). Listed below are the high level steps CSMs should take to conduct an analysis with a customer:
 
 1. Create a card in [Data Science Work Requests Asana Board](https://app.asana.com/0/1200386241920646/board) to provide DS with initial information about the client, the KPI, etc.
-2. Conduct a meeting with the client to establish how their data tracking the KPI is stored and what data can be shared with Balto for the test.
+2. Conduct a meeting with the client to establish how their data tracking the KPI is stored and what data can be shared with Balto for the analysis.
 
     - Typically, DS is not needed in this meeting but can attend if necessary.
     - If DS does not attend the meeting, communicate the information you gathered to them in the Asana card created in step 1.
