@@ -3,12 +3,12 @@
 ## Sharing
 When a new data sharing cadence is established for a customer, DS will create a shared folder on Google Drive where the CSM will deliver updated datasets.
 
-File names should avoid capilatization, special character, and spaces when possible. For example, `bradley_lead_group_data.xlsx` or `blg_data.xlsx` are acceptable file names, while `Bradley Lead Group Data.xlsx` is not.
+File names should avoid capilatization, special characters, and spaces when possible. For example, `bradley_lead_group_data.xlsx` or `blg_data.xlsx` are acceptable file names, while `Bradley Lead Group Data.xlsx` is not.
 
 If there are security requirements from a specific client that require FTP or something similar, DS will attempt to accommodate those needs.
 
 ## Examples
-Typically, customer share data in one of two formats--call-level data or agent-time level data. Like the name implies, call-level data are records where each observation (or row) is a single call. To use call-level data during an analysis, DS at a bare minimum must know whether the call was successful, whether the call was made using Balto, and the date/time of the call.
+Typically, customers share data in one of two formats: call-level data or agent-time level data. Like the name implies, call-level data are records where each observation (or row) is a single call. To use call-level data during an analysis, DS at a bare minimum must know whether the call was successful, whether the call was made using Balto, and the date/time of the call.
 
 Agent-level data are records where each observation represents a single agent-time (e.g. day or week) combination. To use this tupe o data for an analysis, DS must know who the agent is, whether they make calls using Balto, the time unit of observation, and the KPI value for each ahent-time row. Below are example data sets for each general type of data.
 
