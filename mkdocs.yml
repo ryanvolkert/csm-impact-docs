@@ -9,3 +9,5 @@ nav:
     - Overview: index.md
     - Data: data.md
     - FAQ: faq.md
+    - Example Report:
+        Shark/Ninja AHT Analysis: example_report.html
