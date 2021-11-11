@@ -13,4 +13,4 @@ This documentation is intended to guide Customer Success Managers (CSMs) at Balt
 
 Please refer to the remaining sections of this documentation for specifics relevant to each step listed above.
 
-Example reports can be accessed by clicking on one of the examples listed in the sidebar.
+An example report can be accessed by clicking on the example listed in the sidebar.
