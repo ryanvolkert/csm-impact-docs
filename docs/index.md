@@ -9,7 +9,7 @@ This documentation is intended to guide Customer Success Managers (CSMs) at Balt
     - DS will communicate via Asana any additional questions or needs on the Balto side for the analysis after ingesting the initial information.<br><br>
 
 3. After all necessary information to conduct the test is obtained by DS, DS will create a shared folder on Google Drive where the CSM will share customer data.
-4. DS will set up automatic report generation for your specific analysis (if this is more than a one-time analysis). Requests for report updates can be made à la carte, or you can request reports be sent directly to you at some level of frequency via email or Slack (e.g. daily, weekly). Either type of request should be make in the relevant Asana card.
+4. DS will set up automatic report generation for your specific analysis (if this is more than a one-time analysis). Requests for report updates can be made à la carte, or you can request reports be sent directly to you at some level of frequency via email or Slack (e.g. daily, weekly). Either type of request should be made in the relevant Asana card.
 
 Please refer to the remaining sections of this documentation for specifics relevant to each step listed above.
 
