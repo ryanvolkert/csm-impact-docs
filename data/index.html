@@ -56,12 +56,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#sharing">Sharing</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#call-level">Call-Level</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#agent-time-level">Agent-time level</a>
-    </li>
-        </ul>
     </li>
     </ul>
                     </li>
@@ -111,118 +105,10 @@
                 <h1 id="data">Data</h1>
 <h2 id="sharing">Sharing</h2>
 <p>When a new data sharing cadence is established for a customer, DS will create a shared folder on Google Drive where the CSM will deliver updated datasets.</p>
-<p>File names should avoid capilatization, special characters, and spaces when possible. For example, <code>bradley_lead_group_data.xlsx</code> or <code>blg_data.xlsx</code> are acceptable file names, while <code>Bradley Lead Group Data.xlsx</code> is not.</p>
+<p>File names should avoid capitalization, special characters, and spaces when possible. For example, <code>bradley_lead_group_data.xlsx</code> or <code>blg_data.xlsx</code> are acceptable file names, while <code>Bradley Lead Group Data.xlsx</code> is not.</p>
 <p>If there are security requirements from a specific client that require FTP or something similar, DS will attempt to accommodate those needs.</p>
 <h2 id="examples">Examples</h2>
-<p>Typically, customers share data in one of two formats: call-level data or agent-time level data. Like the name implies, call-level data are records where each observation (or row) is a single call. To use call-level data during an analysis, DS at a bare minimum must know whether the call was successful, whether the call was made using Balto, and the date/time of the call.</p>
-<p>Agent-level data are records where each observation represents a single agent-time (e.g. day or week) combination. To use this tupe o data for an analysis, DS must know who the agent is, whether they make calls using Balto, the time unit of observation, and the KPI value for each ahent-time row. Below are example data sets for each general type of data.</p>
-<h3 id="call-level">Call-Level</h3>
-<table>
-<thead>
-<tr>
-<th align="center"><strong>user_id</strong></th>
-<th align="center"><strong>line_of_insurance</strong></th>
-<th align="center"><strong>call_date_pst</strong></th>
-<th align="center"><strong>contact_id</strong></th>
-<th align="center"><strong>is_outbound</strong></th>
-<th align="center"><strong>call_duration_seconds</strong></th>
-<th align="center"><strong>inbound_call_ltv_bucket</strong></th>
-<th align="center"><strong>is_transfer</strong></th>
-<th align="center"><strong>policy_sale</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">1234567</td>
-<td align="center">med_advantage</td>
-<td align="center">6/14/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">108</td>
-<td align="center">[60, 80)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">2222222</td>
-<td align="center">med_advantage</td>
-<td align="center">6/25/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">245</td>
-<td align="center">[40, 60)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">3333333</td>
-<td align="center">life</td>
-<td align="center">6/25/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">40</td>
-<td align="center">[0, 20)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">4444444</td>
-<td align="center">med_advantage</td>
-<td align="center">6/28/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">297</td>
-<td align="center">[40, 60)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">5555555</td>
-<td align="center">life</td>
-<td align="center">6/28/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">61</td>
-<td align="center">[0, 20)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">6666666</td>
-<td align="center">med_advantage</td>
-<td align="center">6/28/21</td>
-<td align="center">XXX</td>
-<td align="center">TRUE</td>
-<td align="center">536</td>
-<td align="center"></td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">7777777</td>
-<td align="center">med_advantage</td>
-<td align="center">6/29/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">938</td>
-<td align="center">[20, 40)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-<tr>
-<td align="center">8888888</td>
-<td align="center">life</td>
-<td align="center">6/30/21</td>
-<td align="center">XXX</td>
-<td align="center">FALSE</td>
-<td align="center">721</td>
-<td align="center">[40, 60)</td>
-<td align="center">FALSE</td>
-<td align="center">FALSE</td>
-</tr>
-</tbody>
-</table>
-<h3 id="agent-time-level">Agent-time level</h3>
+<p>Customers should share data at the agent-time level. Agent-time data are records where each observation represents a single agent-time (e.g. day or week) combination. To use this type of data for an analysis, DS must know who the agent is, whether they make calls using Balto, the time unit of observation, and the KPI value for each agent-time row. Sharing data in this format allows us to line up customer data with what we can pull from our database. Below is an example data sets.</p>
 <table>
 <thead>
 <tr>
@@ -256,7 +142,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Campaign - SQS Lead Screening</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_pamala</td>
 <td align="center">Specialty</td>
 <td align="center">2</td>
 <td align="center">1</td>
@@ -269,7 +155,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Life Standard</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_stephen</td>
 <td align="center">Specialty</td>
 <td align="center">2</td>
 <td align="center">1</td>
@@ -282,7 +168,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Life Standard</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_marge</td>
 <td align="center">Specialty</td>
 <td align="center">3+</td>
 <td align="center">2</td>
@@ -295,7 +181,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Medicare Standard</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_tim</td>
 <td align="center">Specialty</td>
 <td align="center">1</td>
 <td align="center">87</td>
@@ -308,7 +194,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Medicare Standard</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_evelyn</td>
 <td align="center">Specialty</td>
 <td align="center">2</td>
 <td align="center">7</td>
@@ -321,7 +207,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Medicare Standard</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_john</td>
 <td align="center">Specialty</td>
 <td align="center">3+</td>
 <td align="center">163</td>
@@ -334,7 +220,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Medicare Standard - Double Dial</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_catherine</td>
 <td align="center">Specialty</td>
 <td align="center">1</td>
 <td align="center">11</td>
@@ -347,7 +233,7 @@
 <tr>
 <td align="center">2021-09-01</td>
 <td align="center">Allied - Medicare Standard - Double Dial</td>
-<td align="center">allied_tyler</td>
+<td align="center">allied_jack</td>
 <td align="center">Specialty</td>
 <td align="center">2</td>
 <td align="center">27</td>
