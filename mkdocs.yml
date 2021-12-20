@@ -1,13 +1,12 @@
-site_name: Impact Analysis for Balto Customer Success Managers
+site_name: Impact Analysis v2.0 for Balto Customer Success Managers
 site_description: Brought to you by Balto Data Science
-site_author: Ryan Volkert
+site_author: Ryan Volkert, Jordan Navin
 site_url: ""
 theme: readthedocs
 markdown_extensions:
     - codehilite
 nav:
-    - Overview: index.md
-    - Data: data.md
-    - FAQ: faq.md
+    - Impact Analysis v2.0: index.md
+    - Other FAQ: faq.md
     - Example Report:
-        Shark/Ninja AHT Analysis: example_report.html
+        ACI SharkNinja AHT Analysis: example_report.html

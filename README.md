@@ -1,3 +1,3 @@
-# Balto CSM A/B Testing Documentation
+# Balto CSM Impact Analysis Documentation
 
 Created using [MkDocs](https://www.mkdocs.org/).
