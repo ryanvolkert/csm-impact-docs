@@ -35,7 +35,7 @@ Yes, but DS will no longer be actively supporting it.
 ## How do I submit a request for an impact analysis?
 Fill out a card in the Data Science Work Requests Asana board with the following information:
 
-- Client name 
+- Client name.
 - Time period to analyze (e.g. start date and end date). Please limit this time period to two months or less. 
 - Playbook(s) to analyze. If wanting separate analyses by playbook, please specify in the request. 
 - Any sort of additional information related to the analysis such as employing a specific measure of Balto use, filtering on duration (only calls 60 seconds or longer are used by default),
