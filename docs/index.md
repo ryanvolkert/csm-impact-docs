@@ -1,11 +1,44 @@
 # Impact Analysis v2.0
 ## What is impact analysis?
+Impact analysis at Balto is traditionally reserved for any client who is out of the implementation/pilot phase, but wants an estimate
+of how much Balto is helping agent performance beyond what is available in Balto Cloud. Because it is never in Balto's interest
+to pull agents off of Balto for experimentation purposes, impact analysis estimates the effect of Balto across all
+agents who are using Balto by linking variation in Balto use (e.g. checklist, decklist) to changes in agent performance (e.g. win percentage,
+average handle time).
+
+Data Science (DS) does this by estimating a statistical model for agent performance that is a function of Balo use, time, and agent. 
+We then report the marginal effect of a single standard deviation change in Balto use as a percentage deviation from the sample average, as well as present
+the upper and lower bounds of a 95% confidence interval of this effect. An example report for ACI's SharkNinja playbook 
+can be viewed by clicking the link in the sidebar. 
+
 ### What impact can be measured?
-#### What if my customer wants to use their own data?
-
+Impact analysis typically leverages Balto data only. DS' functionality can currently estimate Balto's impact
+for winning percentage (% of calls where win marker was said) or average handle time. Balto use can be measured as one of average checklist usage,
+average decklist usage (% of times when a decklist item was presented it was said), or average usage of the first checklist
+item only. When submitting a request (detailed below), CSMs can specify the Balto usage measure to use or DS
+can use the metric that shows the strongest results.
 ## How is it different from an A/B test?
-
+Impact analysis answers the question *"Among Balto users, does using more Balto improve performance?"*; while an A/B test
+answers the question *"Among all agents (both Balto and non-Balto users), does being a Balto user improve performance?"*
 ## How is it different from the first version?
-### Does the first version still work?
+v2.0 is similar to the first version insofar that a statistical model estimates the impact of Balto use
+on agent performance. In the previous version, after estimation of this model DS would impose assumptions about reduced Balto usage,
+make predictions under these assumptions, then compare them to what's observed in reality. 
+This component of impact analysis no longer occurs and instead the marginal effect of Balto usage directly falling from 
+the model is reported. 
 
+Additionally, v2.0 need not be restricted to a specific playbook; a single analysis can be conducted across all
+or a subset of playbooks for a given client. Moreover, DS will be laying eyes on each analysis prior to the CSM and will reach
+out to them directly in the case of subpar results. 
+### Does the first version still work?
+Yes, but DS will no longer be actively supporting it. 
 ## How do I submit a request for an impact analysis?
+Fill out a card in the Data Science Work Requests Asana board with the following information:
+
+- Client name 
+- Time period to analyze (e.g. start date and end date). Please limit this time period to two months or less. 
+- Playbook(s) to analyze. If wanting separate analyses by playbook, please specify in the request. 
+- Any sort of additional information related to the analysis such as, employing a specific measure of Balto use or filtering on duration (only calls 60 seconds or longer are used by default),
+user exclusion, etc.
+
+In the case of satisfactory results, DS will deliver the analysis to the CSM in Asana. 
