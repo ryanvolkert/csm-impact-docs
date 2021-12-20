@@ -1,4 +1,4 @@
-# FAQ
+# Other FAQ
 ## What is DS's specific methodology for conducting impact analyses?
 - We use statistical modeling, specifically [mixed modeling](https://en.wikipedia.org/wiki/Mixed_model) to estimate the marginal impact of Balto usage while simultaneously controlling for as many potential confounding factors as possible.
 
