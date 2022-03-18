@@ -11,3 +11,8 @@ nav:
     - FAQ: faq.md
     - Example Report:
         Shark/Ninja AHT Analysis: example_report.html
+    - Playbook Report for Balto CSMs:
+        - Playbook Report Overview: playbook_report.md 
+        - Playbook Report FAQ: FAQ_playbook.md
+        - Example Playbook Report:
+               Quotewizard Outbound Report: example_pb_report.html
