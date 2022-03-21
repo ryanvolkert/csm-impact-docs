@@ -6,8 +6,6 @@ This documentation is intended to guide Customer Success Managers (CSMs) at Balt
   - The start and end dates of the period for which the CSM wishes to obtain analysis for.
 2. After all the above necessary information is obtained by DS, DS will generate a report and share it with the CSM within the Asana card created in step 1. The report will be in html format. 
 
-The card should be assigned to Rashmi Kamath. If not available, either Ryan Volkert or Aaron Anderson can be contacted.
-
 Please refer to the remaining sections of this documentation for specifics relevant to the report.
 
 An example report can be accessed by clicking on the example listed in the sidebar.
