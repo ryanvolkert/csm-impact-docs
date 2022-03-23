@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Brought to you by Balto Data Science">
-  <meta name="author" content="Ryan Volkert, Jordan Navin">
+  <meta name="author" content="Ryan Volkert">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Impact Analysis v2.0 for Balto Customer Success Managers</title>
+  <title>Impact Analysis for Balto Customer Success Managers</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Impact Analysis v2.0";
+    var mkdocs_page_name = "Overview";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = null;
   </script>
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Impact Analysis v2.0 for Balto Customer Success Managers</a>
+        <a href="." class="icon icon-home"> Impact Analysis for Balto Customer Success Managers</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -47,34 +47,35 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Impact Analysis v2.0</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Overview</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-impact-analysis">What is impact analysis?</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#what-impact-can-be-measured">What impact can be measured?</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-is-it-different-from-an-ab-test">How is it different from an A/B test?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-is-it-different-from-the-first-version">How is it different from the first version?</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#does-the-first-version-still-work">Does the first version still work?</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-submit-a-request-for-an-impact-analysis">How do I submit a request for an impact analysis?</a>
-    </li>
     </ul>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="faq/">Other FAQ</a>
+                    <li class="toctree-l1"><a class="reference internal" href="data/">Data</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Example Report</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="example_report.html">ACI SharkNinja AHT Analysis</a>
+                    <li class="toctree-l1"><a class="reference internal" href="example_report.html">Shark/Ninja AHT Analysis</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Playbook Report for Balto CSMs</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="playbook_report/">Playbook Report Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="FAQ_playbook/">Playbook Report FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Example Playbook Report</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="example_pb_report.html">Quotewizard Outbound Report</a>
+                </li>
+    </ul>
                     </li>
                 </ul>
       </div>
@@ -86,7 +87,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Impact Analysis v2.0 for Balto Customer Success Managers</a>
+        <a href=".">Impact Analysis for Balto Customer Success Managers</a>
       </nav>
 
       
@@ -98,7 +99,7 @@
     
       
     
-    <li>Impact Analysis v2.0</li>
+    <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -110,47 +111,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="impact-analysis-v20">Impact Analysis v2.0</h1>
-<h2 id="what-is-impact-analysis">What is impact analysis?</h2>
-<p>Impact analysis at Balto is traditionally reserved for any client who is out of the implementation/pilot phase, but wants an estimate
-of how much Balto is helping agent performance beyond what is available in Balto Cloud. Because it is never in Balto's interest
-to pull agents off of Balto for experimentation purposes, impact analysis estimates the effect of Balto across all
-agents who are using Balto by linking variation in Balto use (e.g. checklist, decklist) to changes in agent performance (e.g. win percentage,
-average handle time).</p>
-<p>Data Science (DS) does this by estimating a statistical model for agent performance that is a function of Balo use, time, and agent. 
-We then report the marginal effect of a single standard deviation change in Balto use as a percentage deviation from the sample average, as well as present
-the upper and lower bounds of a 95% confidence interval of this effect. An example report for ACI's SharkNinja playbook 
-can be viewed by clicking the link in the sidebar. </p>
-<h3 id="what-impact-can-be-measured">What impact can be measured?</h3>
-<p>Impact analysis typically leverages Balto data only. DS' functionality can currently estimate Balto's impact
-for winning percentage (% of calls where win marker was said) or average handle time. Balto use can be measured as one of average checklist usage,
-average decklist usage (% of times when a decklist item was presented it was said), or average usage of the first checklist
-item only. When submitting a request (detailed below), CSMs can specify the Balto usage measure to use or DS
-can use the metric that shows the strongest results.</p>
-<h2 id="how-is-it-different-from-an-ab-test">How is it different from an A/B test?</h2>
-<p>Impact analysis answers the question <em>"Among Balto users, does using more Balto improve performance?"</em>; while an A/B test
-answers the question <em>"Among all agents (both Balto and non-Balto users), does being a Balto user improve performance?"</em></p>
-<h2 id="how-is-it-different-from-the-first-version">How is it different from the first version?</h2>
-<p>v2.0 is similar to the first version insofar that a statistical model estimates the impact of Balto use
-on agent performance. In the previous version, after estimation of this model DS would impose assumptions about reduced Balto usage,
-make predictions under these assumptions, then compare them to what's observed in reality. 
-This component of impact analysis no longer occurs and instead the marginal effect of Balto usage directly falling from 
-the model is reported. </p>
-<p>Additionally, v2.0 need not be restricted to a specific playbook; a single analysis can be conducted across all
-or a subset of playbooks for a given client. Moreover, DS will be laying eyes on each analysis prior to the CSM and will reach
-out to them directly in the case of subpar results. </p>
-<h3 id="does-the-first-version-still-work">Does the first version still work?</h3>
-<p>Yes, but DS will no longer be actively supporting it. </p>
-<h2 id="how-do-i-submit-a-request-for-an-impact-analysis">How do I submit a request for an impact analysis?</h2>
-<p>Fill out a card in the Data Science Work Requests Asana board with the following information:</p>
+                <h1 id="overview">Overview</h1>
+<p>This documentation is intended to guide Customer Success Managers (CSMs) at Balto through the process of automated impact or ROI analyses provided by Balto Data Science (DS). Listed below are the high level steps CSMs should take to conduct an analysis with a customer:</p>
+<ol>
+<li>Create a card in <a href="https://app.asana.com/0/1200386241920646/board">Data Science Work Requests Asana Board</a> to provide DS with initial information about the client, the KPI, etc.</li>
+<li>
+<p>Conduct a meeting with the client to establish how their data tracking the KPI is stored and what data can be shared with Balto for the analysis.</p>
 <ul>
-<li>Client name.</li>
-<li>Time period to analyze (e.g. start date and end date). Please limit this time period to two months or less. </li>
-<li>Playbook(s) to analyze. If wanting separate analyses by playbook, please specify in the request. </li>
-<li>Any sort of additional information related to the analysis such as employing a specific measure of Balto use, filtering on duration (only calls 60 seconds or longer are used by default),
-or user exclusion.</li>
+<li>Typically, DS is not needed in this meeting but can attend if necessary.</li>
+<li>If DS does not attend the meeting, communicate the information you gathered to them in the Asana card created in step 1.</li>
+<li>DS will communicate via Asana any additional questions or needs on the Balto side for the analysis after ingesting the initial information.<br><br></li>
 </ul>
-<p>In the case of satisfactory results, DS will deliver the analysis to the CSM in Asana. </p>
+</li>
+<li>
+<p>After all necessary information to conduct the test is obtained by DS, DS will create a shared folder on Google Drive where the CSM will share customer data.</p>
+</li>
+<li>DS will set up automatic report generation for your specific analysis (if this is more than a one-time analysis). Requests for report updates can be made à la carte, or you can request reports be sent directly to you at some level of frequency via email or Slack (e.g. daily, weekly). Either type of request should be made in the relevant Asana card.</li>
+</ol>
+<p>Please refer to the remaining sections of this documentation for specifics relevant to each step listed above.</p>
+<p>An example report can be accessed by clicking on the example listed in the sidebar.</p>
               
             </div>
           </div>
@@ -158,7 +137,7 @@ or user exclusion.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq/" class="btn btn-neutral float-right" title="Other FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="data/" class="btn btn-neutral float-right" title="Data">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -186,7 +165,7 @@ or user exclusion.</li>
     
     
     
-      <span><a href="faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="data/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -205,5 +184,5 @@ or user exclusion.</li>
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2021-12-20 20:28:32.572241+00:00
+Build Date UTC : 2022-03-23 21:00:00.618575+00:00
 -->
